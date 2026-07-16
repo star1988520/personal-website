@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>多端预览 · 月桂之间</title>
+  <style>
+    :root{
+      --paper:#f5f0e6;
+      --paper-soft:#fbf7ef;
+      --ink:#2f271f;
+      --muted:#7b6b5a;
+      --rust:#8a4d34;
+      --line:#c9ad81;
+      --dark:#24180f;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 20%,rgba(181,138,81,.18),transparent 28%),
+        linear-gradient(135deg,#f8f2e7,#ebe0ce);
+      font-family:Songti SC,STSong,Georgia,serif;
+    }
+    .preview-shell{
+      min-height:100vh;
+      display:grid;
+      grid-template-rows:auto 1fr;
+    }
+    .preview-toolbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      padding:18px 22px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:16px;
+      align-items:center;
+      border-bottom:1px solid rgba(138,77,52,.28);
+      background:rgba(245,240,230,.92);
+      backdrop-filter:blur(14px);
+      box-shadow:0 10px 24px rgba(64,40,22,.08);
+    }
+    .preview-title h1{
+      margin:0;
+      font-size:22px;
+      font-weight:400;
+      letter-spacing:.12em;
+    }
+    .preview-title p{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.05em;
+    }
+    .preview-controls{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px 14px;
+      align-items:center;
+    }
+    .control-group{
+      display:flex;
+      gap:6px;
+      padding:4px;
+      border:1px solid rgba(138,77,52,.25);
+      background:rgba(255,250,240,.58);
+    }
+    button,
+    .open-link{
+      appearance:none;
+      border:1px solid transparent;
+      background:transparent;
+      color:var(--ink);
+      font:14px/1.2 Songti SC,STSong,Georgia,serif;
+      letter-spacing:.08em;
+      padding:9px 13px;
+      cursor:pointer;
+      text-decoration:none;
+      transition:.18s ease;
+    }
+    button:hover,
+    .open-link:hover{
+      color:var(--rust);
+      border-color:rgba(138,77,52,.3);
+      background:rgba(255,255,255,.48);
+    }
+    button.active{
+      color:#fff8ed;
+      background:var(--dark);
+      border-color:var(--dark);
+    }
+    .open-link{
+      border-color:rgba(138,77,52,.42);
+      background:var(--paper-soft);
+    }
+    .preview-stage{
+      min-height:0;
+      padding:28px;
+      overflow:auto;
+    }
+    .device-wrap{
+      width:max-content;
+      min-width:100%;
+      display:flex;
+      justify-content:center;
+    }
+    .device{
+      width:var(--device-width,1440px);
+      max-width:none;
+      border:1px solid rgba(138,77,52,.45);
+      background:#fff;
+      box-shadow:
+        0 18px 50px rgba(64,40,22,.18),
+        12px 12px 0 rgba(201,173,129,.35);
+      transition:width .24s ease;
+    }
+    .device-header{
+      height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 14px;
+      border-bottom:1px solid rgba(138,77,52,.28);
+      background:#efe4cf;
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.08em;
+    }
+    .dots{display:flex;gap:6px}
+    .dots i{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      border:1px solid rgba(138,77,52,.55);
+      display:block;
+    }
+    iframe{
+      display:block;
+      width:100%;
+      height:var(--device-height,900px);
+      border:0;
+      background:#fff;
+    }
+    @media(max-width:900px){
+      .preview-toolbar{grid-template-columns:1fr}
+      .preview-controls{justify-content:flex-start}
+      .preview-stage{padding:18px 14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-shell">
+    <header class="preview-toolbar">
+      <div class="preview-title">
+        <h1>多端网页预览</h1>
+        <p>选择页面和设备尺寸，在右侧直接查看当前网站。</p>
+      </div>
+      <div class="preview-controls" aria-label="预览筛选">
+        <div class="control-group" aria-label="页面">
+          <button type="button" data-page="home">首页</button>
+          <button type="button" data-page="videos">视频</button>
+          <button type="button" data-page="about">关于我</button>
+          <button type="button" data-page="products">产品</button>
+          <button type="button" data-page="contact">联系我</button>
+        </div>
+        <div class="control-group" aria-label="尺寸">
+          <button type="button" data-size="desktop" data-width="1440" data-height="900">网页端 1440</button>
+          <button type="button" data-size="tablet" data-width="768" data-height="900">平板 768</button>
+          <button type="button" data-size="mobile" data-width="390" data-height="844">手机端 390</button>
+        </div>
+        <a class="open-link" id="open-current" href="./#home" target="_blank" rel="noopener">单独打开 ↗</a>
+      </div>
+    </header>
+
+    <main class="preview-stage">
+      <div class="device-wrap">
+        <section class="device" id="device" aria-label="设备预览">
+          <div class="device-header">
+            <span id="device-label">网页端 1440 × 900</span>
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <iframe id="site-frame" title="网站多端预览" src="./?preview=responsive#home"></iframe>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const pages = {
+      home: '首页',
+      videos: '视频',
+      about: '关于我',
+      products: '产品',
+      contact: '联系我'
+    };
+    const sizes = {
+      desktop: '网页端',
+      tablet: '平板',
+      mobile: '手机端'
+    };
+    const frame = document.querySelector('#site-frame');
+    const device = document.querySelector('#device');
+    const label = document.querySelector('#device-label');
+    const openCurrent = document.querySelector('#open-current');
+    let currentPage = new URLSearchParams(location.search).get('page') || 'home';
+    let currentSize = new URLSearchParams(location.search).get('size') || 'desktop';
+
+    function setActive(selector, key){
+      document.querySelectorAll(selector).forEach(button => {
+        button.classList.toggle('active', button.dataset.page === key || button.dataset.size === key);
+      });
+    }
+
+    function selectedSizeButton(){
+      return document.querySelector(`[data-size="${currentSize}"]`) || document.querySelector('[data-size="desktop"]');
+    }
+
+    function render(){
+      const sizeButton = selectedSizeButton();
+      const width = Number(sizeButton.dataset.width);
+      const height = Number(sizeButton.dataset.height);
+      device.style.setProperty('--device-width', `${width}px`);
+      device.style.setProperty('--device-height', `${height}px`);
+      label.textContent = `${sizes[currentSize]} ${width} × ${height} · ${pages[currentPage]}`;
+      const target = `./?preview=responsive-${Date.now()}#${currentPage}`;
+      frame.src = target;
+      openCurrent.href = `./#${currentPage}`;
+      setActive('[data-page]', currentPage);
+      setActive('[data-size]', currentSize);
+      history.replaceState(null, '', `?page=${currentPage}&size=${currentSize}`);
+    }
+
+    document.querySelectorAll('[data-page]').forEach(button => {
+      button.addEventListener('click', () => {
+        currentPage = button.dataset.page;
+        render();
+      });
+    });
+    document.querySelectorAll('[data-size]').forEach(button => {
+      button.addEventListener('click', () => {
+        currentSize = button.dataset.size;
+        render();
+      });
+    });
+    render();
+  </script>
+</body>
+</html>

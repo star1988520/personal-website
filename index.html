@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="月桂之间——关于影像、星辰与身体感知的个人网站。" />
+  <title>月桂之间 · 个人主页</title>
+  <link rel="stylesheet" href="styles.css?v=20260716-contact-submit-button" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="active" href="#home" data-tab="home">首页</a>
+      <a href="#videos" data-tab="videos">视频</a>
+      <a href="#about" data-tab="about">关于我</a>
+      <a href="#products" data-tab="products">产品</a>
+      <a href="#contact" data-tab="contact">联系我</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page active" id="home" aria-labelledby="home-title">
+      <div class="hero video-hero">
+        <h1 class="sr-only" id="home-title">月桂之间个人主页</h1>
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-label="首页背景视频">
+          <source src="assets/home-hero.mp4" type="video/mp4">
+        </video>
+        <div class="video-tint" aria-hidden="true"></div>
+        <div class="video-fallback">
+          <span>☾</span>
+          <p>请将首页视频命名为 home-hero.mp4<br>并放入 assets 文件夹</p>
+        </div>
+        <div class="scroll-note video-scroll">向下翻阅 <i></i></div>
+      </div>
+
+      <section class="intro wrap ornament">
+        <div class="portrait-column">
+          <div class="portrait-frame">
+            <div class="portrait peace-scene" id="peace-scene" data-peace-state="idle" data-media-mode="videos" aria-label="点击前状态视频">
+              <video class="peace-video peace-video-before" src="assets/home-portrait-before.mp4?v=20260708-1" poster="assets/home-portrait-before-poster.jpg?v=20260713-loop-cover" autoplay muted playsinline preload="auto"></video>
+              <video class="peace-video peace-video-after" src="assets/home-portrait-after.mp4?v=20260708-1" poster="assets/home-portrait-after-poster.jpg?v=20260713-loop-cover" muted playsinline preload="auto" aria-hidden="true"></video>
+              <span class="peace-scene-fallback" aria-hidden="true">☽</span>
+              <small>PORTRAIT</small>
+            </div>
+          </div>
+          <button class="peace-button" id="peace-button" type="button" aria-pressed="false" aria-controls="peace-scene"><span>✦</span><b>愿世界和平</b><span>✦</span></button>
+        </div>
+        <div>
+          <p class="identity-line">ai使用者 <i>|</i> 抽象学家 <i>|</i></p>
+          <h2>你好我是斯达很高兴认识你</h2>
+          <p class="lead">让我们这颗蔚蓝星球中找到属于自己的一片净土</p>
+          <p>每天都在痴迷 vibe coding，晚上睡不着，白天在摆烂。</p>
+          <a class="button about-button" href="#about" data-tab="about"><span class="about-button-label">关于我的更多信息 <span class="about-button-arrow">→</span></span></a>
+        </div>
+      </section>
+
+      <section class="video-feature wrap">
+        <div class="section-heading"><div><p class="section-no">Ⅱ · SELECTED FILMS</p><h2>视频专区</h2></div><a class="text-link" href="#videos" data-tab="videos">查看全部 <span>→</span></a></div>
+        <div class="film-grid">
+          <article class="film-card large"><a class="film-art art-one" href="https://v.douyin.com/idatplgbSA0/" target="_blank" rel="noopener" aria-label="在抖音观看：狗狗我呀也是到了狗生巅峰"><span class="play">▶</span><span class="duration">抖音观看</span></a><p class="film-description">狗狗我呀也是到了狗生巅峰。吃喝玩乐，狗生不过如此 🐶</p><div class="film-stats"><span class="douyin-source">♬ 来自抖音</span></div></article>
+          <article class="film-card"><a class="film-art art-two" href="https://v.douyin.com/U7wiVvOl8X8/" target="_blank" rel="noopener" aria-label="在抖音观看：人生不要回头看"><span class="play">▶</span><span class="duration">抖音观看</span></a><p class="film-description">占星不看已故盘，所以朋友，人生不要回头看，走好眼前路。</p><div class="film-stats"><span class="douyin-source">♬ 来自抖音</span></div></article>
+          <article class="film-card"><a class="film-art art-three" href="https://v.douyin.com/jSYqc320sAw/" target="_blank" rel="noopener" aria-label="在抖音观看：群星二宫等于有米吗"><span class="play">▶</span><span class="duration">抖音观看</span></a><p class="film-description">难道说群星二宫＝有米？爱情事业双丰收？</p><div class="film-stats"><span class="douyin-source">♬ 来自抖音</span></div></article>
+        </div>
+      </section>
+
+      <section class="horoscope-section wrap" id="horoscope-section" aria-labelledby="horoscope-title">
+        <div class="horoscope-panel">
+          <div class="horoscope-controls">
+            <div class="astrologer-meteor-field" aria-hidden="true"><svg viewBox="0 0 1200 245" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="meteor-gold" x1="0" x2="1"><stop offset="0" stop-color="#b98942" stop-opacity="0"></stop><stop offset=".72" stop-color="#d6b16d" stop-opacity=".58"></stop><stop offset="1" stop-color="#fff5d9" stop-opacity=".96"></stop></linearGradient><filter id="meteor-glow"><feGaussianBlur stdDeviation="1.4" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g class="meteor meteor-one"><path d="M 35 105 L 194 15" filter="url(#meteor-glow)"></path><circle cx="194" cy="15" r="2"></circle></g><g class="meteor meteor-two"><path d="M 135 172 L 275 92" filter="url(#meteor-glow)"></path><circle cx="275" cy="92" r="1.6"></circle></g><g class="meteor meteor-three"><path d="M 785 86 L 955 -9" filter="url(#meteor-glow)"></path><circle cx="955" cy="-9" r="2.2"></circle></g><g class="meteor meteor-four"><path d="M 915 192 L 1064 110" filter="url(#meteor-glow)"></path><circle cx="1064" cy="110" r="1.8"></circle></g><g class="meteor meteor-five"><path d="M 760 214 L 850 164" filter="url(#meteor-glow)"></path><circle cx="850" cy="164" r="1.35"></circle></g><g class="meteor-constellation constellation-left"><path d="M 22 28 L 58 7 L 95 41 L 136 21 L 172 55"></path><circle cx="22" cy="28" r="1.6"></circle><circle cx="58" cy="7" r="1.6"></circle><circle cx="95" cy="41" r="1.6"></circle><circle cx="136" cy="21" r="1.6"></circle><circle cx="172" cy="55" r="1.6"></circle></g><g class="meteor-constellation constellation-right"><path d="M 1016 168 L 1052 144 L 1087 180 L 1123 152"></path><circle cx="1016" cy="168" r="1.5"></circle><circle cx="1052" cy="144" r="1.5"></circle><circle cx="1087" cy="180" r="1.5"></circle><circle cx="1123" cy="152" r="1.5"></circle></g></svg></div>
+            <div class="zodiac-picker"><span class="zodiac-picker-label" id="zodiac-picker-label">选择星座</span><button class="zodiac-picker-trigger" id="zodiac-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false"><img id="selected-zodiac-icon" src="assets/zodiac/aries.png" alt=""><span id="selected-zodiac-name">白羊座</span><span class="zodiac-picker-arrow" aria-hidden="true">⌄</span></button><select class="sr-only" id="zodiac-select" tabindex="-1" aria-hidden="true"><option value="白羊座">白羊座</option><option value="金牛座">金牛座</option><option value="双子座">双子座</option><option value="巨蟹座">巨蟹座</option><option value="狮子座">狮子座</option><option value="处女座">处女座</option><option value="天秤座">天秤座</option><option value="天蝎座">天蝎座</option><option value="射手座">射手座</option><option value="摩羯座">摩羯座</option><option value="水瓶座">水瓶座</option><option value="双鱼座">双鱼座</option></select><div class="zodiac-picker-menu" id="zodiac-picker-menu" role="listbox" aria-labelledby="zodiac-picker-label" hidden><button type="button" role="option" data-zodiac-index="0" aria-selected="true"><img src="assets/zodiac/aries.png" alt=""><span>白羊座</span></button><button type="button" role="option" data-zodiac-index="1" aria-selected="false"><img src="assets/zodiac/taurus.png" alt=""><span>金牛座</span></button><button type="button" role="option" data-zodiac-index="2" aria-selected="false"><img src="assets/zodiac/gemini.png" alt=""><span>双子座</span></button><button type="button" role="option" data-zodiac-index="3" aria-selected="false"><img src="assets/zodiac/cancer.png" alt=""><span>巨蟹座</span></button><button type="button" role="option" data-zodiac-index="4" aria-selected="false"><img src="assets/zodiac/leo.png" alt=""><span>狮子座</span></button><button type="button" role="option" data-zodiac-index="5" aria-selected="false"><img src="assets/zodiac/virgo.png" alt=""><span>处女座</span></button><button type="button" role="option" data-zodiac-index="6" aria-selected="false"><img src="assets/zodiac/libra.png" alt=""><span>天秤座</span></button><button type="button" role="option" data-zodiac-index="7" aria-selected="false"><img src="assets/zodiac/scorpio.png" alt=""><span>天蝎座</span></button><button type="button" role="option" data-zodiac-index="8" aria-selected="false"><img src="assets/zodiac/sagittarius.png" alt=""><span>射手座</span></button><button type="button" role="option" data-zodiac-index="9" aria-selected="false"><img src="assets/zodiac/capricorn.png" alt=""><span>摩羯座</span></button><button type="button" role="option" data-zodiac-index="10" aria-selected="false"><img src="assets/zodiac/aquarius.png" alt=""><span>水瓶座</span></button><button type="button" role="option" data-zodiac-index="11" aria-selected="false"><img src="assets/zodiac/pisces.png" alt=""><span>双鱼座</span></button></div></div>
+            <div class="astrologer-figure" id="astrologer-figure" aria-label="星座占星师动画">
+              <video class="astrologer-layer astrologer-person astrologer-person-before" id="astrologer-before" autoplay muted loop playsinline preload="auto" aria-label="点击前的占星师动画"><source src="assets/astrology/webm/astrologer-before.webm" type="video/webm"></video>
+              <video class="astrologer-layer astrologer-person astrologer-person-after" id="astrologer-after" muted playsinline preload="metadata" aria-label="星座点击后的占星师动画"><source src="assets/astrology/webm/signs/aries.webm" type="video/webm"></video>
+            </div>
+            <div class="horoscope-tabs" role="tablist"><button class="active" type="button" data-period="daily">每日</button><button type="button" data-period="weekly">每周</button><button type="button" data-period="monthly">每月</button></div>
+          </div>
+          <div class="horoscope-reading"><div class="horoscope-orbit"><svg class="orbit-hexagram" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><defs><radialGradient id="orbit-hexagram-gradient" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#88513a" stop-opacity=".005"></stop><stop offset="100%" stop-color="#88513a" stop-opacity=".08"></stop></radialGradient></defs><polygon points="50,9 88,75 12,75" stroke="url(#orbit-hexagram-gradient)"></polygon><polygon points="50,91 12,25 88,25" stroke="url(#orbit-hexagram-gradient)"></polygon></svg><img id="zodiac-symbol" src="assets/zodiac/aries.png" alt="白羊座图标"></div><div><p class="horoscope-date" id="horoscope-date"></p><h3 id="horoscope-heading"></h3><p id="horoscope-text"></p><div class="fortune-scores"><span>心情 <b id="score-mood"></b></span><span>关系 <b id="score-love"></b></span><span>行动 <b id="score-work"></b></span></div></div></div>
+          <div class="horoscope-footer"><small>星座运势为娱乐性灵感内容，请以自己的感受与判断为准。</small><a href="#products" data-tab="products">查看更多 <span>→</span></a></div>
+        </div>
+      </section>
+
+      <section class="guestbook wrap">
+        <p class="section-no">Ⅲ · GUEST BOOK</p><h2>留下一句话</h2><p>关于某支视频、一个困惑，或只是今天的心情。</p>
+        <form id="guestbook-form"><label><span>你的名字</span><input name="name" placeholder="如何称呼你" required></label><label class="wide"><span>想说的话</span><textarea name="message" placeholder="写在这里……" required></textarea></label><button class="button sliced-image-button guestbook-image-button" type="submit"><span class="sliced-image-button__skin" aria-hidden="true"><span class="sliced-image-button__slice sliced-image-button__left-cap"></span><span class="sliced-image-button__slice sliced-image-button__left-rail"></span><span class="sliced-image-button__slice sliced-image-button__center"></span><span class="sliced-image-button__slice sliced-image-button__right-rail"></span><span class="sliced-image-button__slice sliced-image-button__right-cap"></span></span><span class="sliced-image-button__label">写入留言簿</span></button></form>
+        <p class="form-note" id="guestbook-note" role="status"></p>
+      </section>
+    </section>
+
+    <section class="page inner-page wrap" id="videos" aria-labelledby="videos-title">
+      <div class="page-title film-reel-hero">
+        <div class="film-reel-window" aria-hidden="true">
+          <div class="film-reel-track">
+            <div class="film-reel-frame"><img src="assets/douyin-cover-1.webp" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/about-portrait-light.png" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/douyin-cover-2.webp" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/female-astrologer.png" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/douyin-cover-3.webp" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/about-portrait-second.png" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/douyin-cover-1.webp" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/about-portrait-light.png" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/douyin-cover-2.webp" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/female-astrologer.png" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/douyin-cover-3.webp" alt=""></div>
+            <div class="film-reel-frame"><img src="assets/about-portrait-second.png" alt=""></div>
+          </div>
+        </div>
+        <div class="film-reel-shade" aria-hidden="true"></div>
+        <div class="film-reel-copy"><p class="eyebrow">THE MOVING PICTURES</p><h1 id="videos-title">数字纪念馆</h1><p>数字纪念馆，留着给老了看！</p></div>
+      </div>
+      <div class="video-toolbar"><div class="filters" aria-label="视频分类"><button class="active" type="button" data-video-filter="干货" aria-pressed="true">干货</button><button type="button" data-video-filter="抽象" aria-pressed="false">抽象</button></div><label class="video-search"><span aria-hidden="true">⌕</span><input id="video-search" type="search" placeholder="搜索视频关键词" aria-label="搜索视频关键词"></label></div>
+      <div class="catalog-grid" id="video-catalog"></div>
+      <div class="video-load-more-wrap"><button class="button video-load-more" id="video-load-more" type="button">加载更多</button></div>
+      <section class="social-follow" aria-labelledby="social-follow-title">
+        <span class="social-follow-compass" aria-hidden="true"></span>
+        <p class="section-no">FOLLOW THE JOURNEY</p>
+        <h2 id="social-follow-title">想看更多内容？</h2>
+        <p class="social-follow-lead">在抖音和小红书关注「斯达」</p>
+        <p>你不容错过的 AI 踩坑之路，见证一位 vibe coding 大师的诞生，保佑周更！</p>
+        <div class="social-follow-actions">
+          <a class="button" href="https://v.douyin.com/zhioE3yhxNs/" target="_blank" rel="noopener noreferrer" aria-label="前往斯达的抖音主页">抖音 <span>↗</span></a>
+          <a class="button social-follow-secondary" href="https://www.xiaohongshu.com/user/profile/624f83960000000021027206" target="_blank" rel="noopener noreferrer" aria-label="前往斯达的小红书主页">小红书 <span>↗</span></a>
+        </div>
+      </section>
+    </section>
+
+    <section class="page inner-page wrap" id="about" aria-label="关于我">
+      <div class="about-starlight" data-starlight-text="流星划过天际，每一颗小星星都值得被看见" aria-label="流星划过天际，每一颗小星星都值得被看见">
+        <span class="about-starlight-ornament" aria-hidden="true"><i></i>✦<b>☾</b><i></i></span>
+        <p class="about-starlight-text" aria-hidden="true"></p>
+        <span class="about-starlight-ornament reverse" aria-hidden="true"><i></i><b>☽</b>✦<i></i></span>
+      </div>
+      <div class="about-hero">
+        <div class="about-hero-image" aria-live="polite">
+          <img class="about-portrait-page about-portrait-front" src="assets/about-portrait-light.png?v=20260630-1" alt="浅蓝星盘前手托白鸽的人物插画">
+          <img class="about-portrait-page about-portrait-second" src="assets/about-portrait-second.png?v=20260630-1" alt="浅蓝星盘前手持水晶球的占星师插画" aria-hidden="true">
+          <button class="about-page-turn about-left-return" type="button" data-book-action="previous"><span>←</span> 上一页</button>
+        </div>
+        <div class="about-book" id="about-book">
+          <div class="about-book-page about-book-back" aria-hidden="true">
+            <span class="about-book-star">✦</span><p class="section-no">TO BE CONTINUED</p><h2>敬请期待</h2><p>故事仍在书写，下一页会在合适的时候抵达。</p>
+            <button class="about-page-turn about-back-return" type="button" data-book-action="previous"><span>←</span> 上一页</button>
+          </div>
+          <div class="about-book-page about-book-front">
+            <div class="about-leaf-face about-leaf-copy">
+              <div class="about-hero-copy"><p class="section-no">欢迎来到斯达的世界</p><div class="about-story"><p>本世纪初，一个不知名的偏远山村，一位伟大的 AI 探险者诞生了。亲爱的冒险家们准备好了吗？欢迎来到斯达的世界！</p><p>我是一个热爱探索新鲜事物、喜欢徒步爬山、热爱户外的冒险者。非常的 E，所以导致我的朋友经常说我不擅长内省；脑子里一堆赚钱 idea，实际一个大穷逼。</p><p>目前正在探索 AI，人生终极目标是开一家养老院，支线任务是开一家情趣用品小店（世界不能没有 SEX，不是嘛）。</p></div><span>✦</span></div>
+              <button class="about-page-turn" type="button" data-book-action="next">下一页 <span>→</span></button>
+            </div>
+            <div class="about-leaf-face about-leaf-picture" aria-hidden="true">
+              <img src="assets/about-portrait-second.png?v=20260630-1" alt="浅蓝星盘前手持水晶球的占星师插画">
+              <button class="about-page-turn about-image-return" type="button" data-book-action="previous"><span>←</span> 上一页</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="recent-updates" aria-labelledby="recent-updates-title">
+        <div class="recent-updates-heading"><span>✦</span><div><p class="section-no">RECENT UPDATES</p><h2 id="recent-updates-title">近日生活</h2></div><span>☄</span></div>
+        <div class="recent-updates-grid">
+          <article class="recent-update-card"><span class="recent-update-icon">▣</span><div><p>最近在读</p><h3>十字路口</h3></div></article>
+          <article class="recent-update-card"><span class="recent-update-icon">▻</span><div><p>最近狂刷</p><h3>整太线失事视频</h3></div></article>
+          <article class="recent-update-card"><span class="recent-update-icon">⌘</span><div><p>最近感兴趣</p><h3>AI 编程</h3></div></article>
+        </div>
+      </section>
+      <h2 class="timeline-title">斯达星迹</h2>
+      <div class="life-timeline" aria-label="个人经历时间轴">
+        <div class="timeline-axis" aria-hidden="true"></div>
+        <article class="timeline-item right"><i></i><div class="timeline-card"><span class="timeline-icon">⌘</span><div><p><b>2026.01</b><em>支线</em></p><h3>激动地开始 AI 编程，上线了我的个人网站</h3></div></div></article>
+        <article class="timeline-item left"><i></i><div class="timeline-card"><span class="timeline-icon">↗</span><div><p><em>主线</em><b>2025.09</b></p><h3>toB 软件产品经理，RPA + AI 方向</h3></div></div></article>
+        <article class="timeline-item right"><i></i><div class="timeline-card"><span class="timeline-icon">↘</span><div><p><b>2025.04</b><em>支线</em></p><h3>开通股票账户，一根绿油油的小韭菜诞生！</h3></div></div></article>
+        <article class="timeline-item right"><i></i><div class="timeline-card"><span class="timeline-icon">▣</span><div><p><b>2024.11</b><em>支线</em></p><h3>发布第一条抽象视频，成为 B 站 UP 主</h3></div></div></article>
+        <article class="timeline-item right"><i></i><div class="timeline-card"><span class="timeline-icon">⌂</span><div><p><b>2024.02</b><em>支线</em></p><h3>开了一家女生情趣玩具店</h3></div></div></article>
+        <article class="timeline-item left"><i></i><div class="timeline-card"><span class="timeline-icon">▥</span><div><p><em>主线</em><b>2023.07</b></p><h3>toB 软件产品经理，BI 方向</h3></div></div></article>
+      </div>
+    </section>
+
+    <section class="page inner-page wrap" id="products" aria-labelledby="products-title">
+      <div class="page-title product-convergence-hero" id="product-convergence">
+        <div class="product-thoughts" aria-hidden="true">
+          <span class="product-thought" style="--x:6%;--y:18%;--tx:34%;--ty:46%;--txm:39%;--tym:42%;--delay:0s">如果这样呢</span>
+          <span class="product-thought" style="--x:28%;--y:9%;--tx:38%;--ty:50%;--txm:50%;--tym:42%;--delay:.08s">灵感</span>
+          <span class="product-thought" style="--x:74%;--y:10%;--tx:42%;--ty:45%;--txm:61%;--tym:42%;--delay:.04s">能不能更简单</span>
+          <span class="product-thought" style="--x:92%;--y:24%;--tx:46%;--ty:51%;--txm:41%;--tym:54%;--delay:.13s">会有人使用吗</span>
+          <span class="product-thought" style="--x:8%;--y:50%;--tx:50%;--ty:46%;--txm:50%;--tym:54%;--delay:.2s">先试试看</span>
+          <span class="product-thought" style="--x:24%;--y:38%;--tx:54%;--ty:52%;--txm:59%;--tym:54%;--delay:.16s">梳理需求</span>
+          <span class="product-thought" style="--x:78%;--y:41%;--tx:58%;--ty:45%;--txm:38%;--tym:45%;--delay:.24s">和 AI 对话</span>
+          <span class="product-thought" style="--x:94%;--y:55%;--tx:62%;--ty:50%;--txm:62%;--tym:45%;--delay:.18s">换一种方式</span>
+          <span class="product-thought" style="--x:7%;--y:78%;--tx:66%;--ty:46%;--txm:44%;--tym:57%;--delay:.27s">再改一点</span>
+          <span class="product-thought" style="--x:27%;--y:88%;--tx:36%;--ty:53%;--txm:56%;--tym:57%;--delay:.22s">反复测试</span>
+          <span class="product-thought" style="--x:72%;--y:88%;--tx:44%;--ty:48%;--txm:36%;--tym:50%;--delay:.3s">做出原型</span>
+          <span class="product-thought" style="--x:91%;--y:78%;--tx:56%;--ty:48%;--txm:64%;--tym:50%;--delay:.25s">让它真正可用</span>
+          <span class="product-thought thought-wide" style="--x:2%;--y:34%;--tx:64%;--ty:53%;--delay:.09s">今天就开始</span>
+          <span class="product-thought thought-wide" style="--x:39%;--y:5%;--tx:32%;--ty:49%;--delay:.14s">AI</span>
+          <span class="product-thought thought-wide" style="--x:61%;--y:6%;--tx:40%;--ty:53%;--delay:.19s">从 0 到 1</span>
+          <span class="product-thought thought-wide" style="--x:97%;--y:37%;--tx:48%;--ty:44%;--delay:.11s">交互</span>
+          <span class="product-thought thought-wide" style="--x:42%;--y:94%;--tx:60%;--ty:53%;--delay:.32s">迭代</span>
+          <span class="product-thought thought-wide" style="--x:59%;--y:95%;--tx:68%;--ty:49%;--delay:.31s">上线</span>
+        </div>
+        <div class="product-convergence-copy">
+          <p class="eyebrow product-develop product-develop-eyebrow" aria-label="FROM THOUGHT TO FORM">FROM THOUGHT TO FORM</p>
+          <h1 id="products-title" data-title="把想法，做出来"><span>把想法，</span><span>做出来</span></h1>
+          <p class="product-develop product-develop-subtitle" aria-label="每一个念头，都值得被实现；AI 如同魔法，让灵感照进现实。">每一个念头，都值得被实现；AI 如同魔法，让灵感照进现实。</p>
+        </div>
+      </div>
+      <section class="vibe-workshop" aria-label="Vibe creations">
+        <header class="vibe-workshop-index" aria-hidden="true">
+          <span>VIBE CREATIONS</span><i></i><span>001 — 002</span>
+        </header>
+        <div class="vibe-product-grid">
+          <article class="vibe-product-card vibe-product-live">
+            <div class="vibe-product-index"><span># 001</span><small>AVAILABLE NOW</small></div>
+            <div class="vibe-product-symbol" aria-hidden="true">☼</div>
+            <p class="eyebrow">ASTROLOGY TOOL</p>
+            <h3>今天星星说什么？</h3>
+            <p>选择你的星座，让水晶球为你显现今日、每周与每月的星语。</p>
+            <a class="button sliced-image-button astrology-tool-image-button" href="#home" data-tab="home" data-scroll-target="horoscope-section"><span class="sliced-image-button__skin" aria-hidden="true"><span class="sliced-image-button__slice sliced-image-button__left-cap"></span><span class="sliced-image-button__slice sliced-image-button__left-rail"></span><span class="sliced-image-button__slice sliced-image-button__center"></span><span class="sliced-image-button__slice sliced-image-button__right-rail"></span><span class="sliced-image-button__slice sliced-image-button__right-cap"></span></span><span class="sliced-image-button__label">开启占星球 <span aria-hidden="true">→</span></span></a>
+          </article>
+          <article class="vibe-product-card vibe-product-coming">
+            <div class="vibe-product-index"><span># 002</span><small>IN THE MAKING</small></div>
+            <div class="vibe-product-symbol" aria-hidden="true">✧</div>
+            <p class="eyebrow">COMING SOON</p>
+            <h3>敬请期待</h3>
+            <p>新的脑洞正在形成，下一件小作品会在合适的时候与你见面。</p>
+            <span class="vibe-product-status">酿酿中</span>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="page inner-page wrap" id="contact" aria-labelledby="contact-title">
+      <div class="page-title contact-letter-hero" id="contact-letter-hero">
+        <p class="eyebrow contact-letter-eyebrow">BEGIN WITH A LETTER</p>
+        <h1 id="contact-title" aria-label="从一封信开始"><span aria-hidden="true">从</span><span aria-hidden="true">一</span><span aria-hidden="true">封</span><span aria-hidden="true">信</span><span aria-hidden="true">开</span><span aria-hidden="true">始</span></h1>
+        <span class="contact-ink-echo" aria-hidden="true"></span>
+        <p class="contact-letter-subtitle">也许一次合作、一点灵感，或一句偶然的问候，会成为彼此认识的开始。</p>
+        <img class="contact-quill" src="assets/contact-quill-user-web-v1.png" alt="" aria-hidden="true">
+      </div>
+      <div class="contact-layout"><div><h2>让我们开始一场谈话</h2><p>我通常会在 2–3 个工作日内回复。涉及咨询预约时，请简单说明你希望讨论的主题。</p><dl><dt>电子邮箱</dt><dd>hello@atelier-luna.cn</dd><dt>内容平台</dt><dd>小红书 / Bilibili @月桂之间</dd><dt>工作时间</dt><dd>周二至周六 · 10:00—18:00</dd></dl></div><form id="contact-form"><label><span>姓名</span><input required placeholder="你的名字"></label><label><span>邮箱</span><input type="email" required placeholder="name@example.com"></label><label><span>联系主题</span><select><option>咨询预约</option><option>品牌合作</option><option>其他</option></select></label><label><span>留言</span><textarea required placeholder="告诉我你的想法……"></textarea></label><button class="button sliced-image-button contact-submit-image-button" type="submit"><span class="sliced-image-button__skin" aria-hidden="true"><span class="sliced-image-button__slice sliced-image-button__left-cap"></span><span class="sliced-image-button__slice sliced-image-button__left-rail"></span><span class="sliced-image-button__slice sliced-image-button__center"></span><span class="sliced-image-button__slice sliced-image-button__right-rail"></span><span class="sliced-image-button__slice sliced-image-button__right-cap"></span></span><span class="sliced-image-button__label">寄出信笺</span></button><p class="form-note" id="contact-note" role="status"></p></form></div>
+    </section>
+  </main>
+
+  <aside class="friend-marquee" aria-label="电子好友主页">
+    <div class="friend-track">
+      <a class="friend-card" href="https://example.com/beichen" target="_blank" rel="noopener"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/xiang" target="_blank" rel="noopener"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/garden" target="_blank" rel="noopener"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/zhangyu" target="_blank" rel="noopener"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/lingchuan" target="_blank" rel="noopener"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/beichen" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/xiang" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/garden" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/zhangyu" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><span>◉</span><b>法语教学</b></a>
+      <a class="friend-card" href="https://example.com/lingchuan" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><span>◉</span><b>法语教学</b></a>
+    </div>
+  </aside>
+  <footer><div class="footer-mark">✦</div><h2>让我们一起探索更多的可能性</h2><p>我们都是最棒的冒险家</p><div class="footer-links"><a href="#home" data-tab="home">首页</a><a href="#videos" data-tab="videos">视频</a><a href="#about" data-tab="about">关于我</a><a href="#products" data-tab="products">产品</a><a href="#contact" data-tab="contact">联系</a></div><small>© 2026 ATELIER LUNA · ALL RIGHTS RESERVED</small></footer>
+  <script src="script.js?v=20260713-peace-loop-cover"></script>
+</body>
+</html>

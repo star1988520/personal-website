@@ -1,0 +1,4 @@
+interface:
+  display_name: "自适应图片按钮"
+  short_description: "按指定尺寸无变形生成双状态切片按钮并自动完成网页接入"
+  default_prompt: "使用 $build-sliced-image-button 将常规态和选中态按钮素材按指定尺寸无变形接入网页。"

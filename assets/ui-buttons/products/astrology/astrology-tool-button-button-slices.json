@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "name": "astrology-tool-button",
+  "build_id": "5673bba6fb",
+  "source": {
+    "width_px": 489,
+    "height_px": 162,
+    "default": "/Users/yuyuhang/Desktop/个人网站/assets/ui-buttons/button-default.png",
+    "selected": "/Users/yuyuhang/Desktop/个人网站/assets/ui-buttons/button-selected.png"
+  },
+  "target": {
+    "width_px": 178,
+    "height_px": 57,
+    "height_scale": 0.3519
+  },
+  "guides_px": {
+    "left_end": 92,
+    "center_start": 181,
+    "center_end": 307,
+    "right_start": 397
+  },
+  "layout": {
+    "left_cap_px": 32.3704,
+    "left_rail_fr": 89,
+    "center_px": 44.3333,
+    "right_rail_fr": 90,
+    "right_cap_px": 32.3704,
+    "remaining_rail_width_px": 68.9259,
+    "minimum_target_width_px": 112
+  },
+  "assets": {
+    "default": {
+      "left_cap": "astrology-tool-button-5673bba6fb/astrology-tool-button-default-left-cap-2c26e66f17.png",
+      "left_rail": "astrology-tool-button-5673bba6fb/astrology-tool-button-default-left-rail-1311c6203c.png",
+      "center": "astrology-tool-button-5673bba6fb/astrology-tool-button-default-center-47f7bbff68.png",
+      "right_rail": "astrology-tool-button-5673bba6fb/astrology-tool-button-default-right-rail-7ef3bf367e.png",
+      "right_cap": "astrology-tool-button-5673bba6fb/astrology-tool-button-default-right-cap-73d9d9a9a4.png"
+    },
+    "selected": {
+      "left_cap": "astrology-tool-button-5673bba6fb/astrology-tool-button-selected-left-cap-1869ed5116.png",
+      "left_rail": "astrology-tool-button-5673bba6fb/astrology-tool-button-selected-left-rail-7e02c12701.png",
+      "center": "astrology-tool-button-5673bba6fb/astrology-tool-button-selected-center-2b319bf65b.png",
+      "right_rail": "astrology-tool-button-5673bba6fb/astrology-tool-button-selected-right-rail-30ab2b90da.png",
+      "right_cap": "astrology-tool-button-5673bba6fb/astrology-tool-button-selected-right-cap-b929614577.png"
+    }
+  },
+  "style_defaults": {
+    "box_shadow": "0 0 4px rgba(255,255,255,.72)",
+    "transform": "none"
+  }
+}

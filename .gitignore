@@ -1,0 +1,15 @@
+.DS_Store
+
+# Local backups and generated working directories
+backups/
+tmp/
+output/
+outputs/
+work/
+
+# Unused high-resolution production masters
+assets/astrology/astrologer-before-alpha.mov
+assets/astrology/astrologer-after-alpha.mov
+
+# Kept locally only because the homepage source video is too large for this upload
+assets/home-hero.mp4

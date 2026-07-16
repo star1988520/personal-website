@@ -1,0 +1,61 @@
+{
+  "frames": [
+    {
+      "height": 384.37628173828125,
+      "src": "assets/douyin-cover-2.webp",
+      "visible": true,
+      "width": 382.6954345703125,
+      "x": -378.118896484375,
+      "y": 208.6911163330078
+    },
+    {
+      "height": 384.37628173828125,
+      "src": "assets/female-astrologer.png",
+      "visible": true,
+      "width": 378.62908935546875,
+      "x": 68.32202911376953,
+      "y": 208.6911163330078
+    },
+    {
+      "height": 384.37628173828125,
+      "src": "assets/douyin-cover-3.webp",
+      "visible": true,
+      "width": 376.11920166015625,
+      "x": 514.762939453125,
+      "y": 208.6911163330078
+    },
+    {
+      "height": 384.37628173828125,
+      "src": "assets/about-portrait-second.png",
+      "visible": true,
+      "width": 378.31610107421875,
+      "x": 959.0068969726562,
+      "y": 208.6911163330078
+    },
+    {
+      "height": 384.37628173828125,
+      "src": "assets/douyin-cover-1.webp",
+      "visible": true,
+      "width": 382.3824462890625,
+      "x": 1401.3814697265625,
+      "y": 208.6911163330078
+    }
+  ],
+  "hero": {
+    "height": 500,
+    "width": 1440,
+    "x": 0,
+    "y": 150
+  },
+  "stripOpacity": "1",
+  "title": {
+    "height": 330.5703125,
+    "width": 420,
+    "x": 510,
+    "y": 234.7109375
+  },
+  "viewport": {
+    "height": 900,
+    "width": 1440
+  }
+}
